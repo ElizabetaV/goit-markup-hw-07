@@ -1,0 +1,182 @@
+
+:root {
+    --second-text-color:#2E2F42;
+    --first-text-color: #434455; 
+    --first-background-color: #ffffff;
+    --secong-background-color: #2E2F42;
+    --accent : #4D5AE5;
+    --footer-text : #E7E9FC;
+}
+
+body {
+    background-color: var(--first-background-color);
+    color: var(--first-text-color) ;
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo {
+    color: var(--second-text-color);
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.accent {
+    color: var(--accent);
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.33px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.header-link,
+.menu-link {
+    text-decoration: none;
+}
+
+.header-link {
+font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: var(--first-text-color);
+}
+
+.header-link:hover,
+.header-link:focus {
+color: #4D5AE5;
+}
+
+.menu-link {
+font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 1,5;
+letter-spacing: 0.02em;
+color: var(--second-text-color);
+}
+
+.menu-link:hover,
+.menu-link:focus {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1,5;
+    letter-spacing: 0.02em;
+    color: var(--first-text-color);
+}
+
+.menu-item:active {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1,5;
+    letter-spacing: 0.02em;
+    color: #4D5AE5;
+    
+}
+
+
+.header-item {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1,5;
+    letter-spacing: 0.02em;
+    color: var(--first-text-color);
+}
+
+.hero-name {
+font-family: inherit;
+font-style: normal;
+font-weight: 600;
+font-size: 56px;
+line-height: 1.07;
+letter-spacing: 0.02em;
+color: #FFFFFF;
+background: #2E2F42;
+}
+
+.btn {
+font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: 0.04em;
+color: #FFFFFF;
+background-color: #4D5AE5;
+cursor: pointer;
+}
+
+.text  {
+font-family: inherit;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: var(--first-text-color);
+}
+
+.skills-item-title {
+font-family: inherit;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 1.2;
+letter-spacing: 0.02em;
+color: var(--second-text-color);
+}
+
+.skills-list,
+.header-list,
+.menu-list,
+.descr-list,
+.team-list,
+.portfolio-list,
+.portfolio-menu-list {
+list-style-type: none;
+}
+
+.descr-title {
+font-family: inherit;
+font-style: normal;
+font-weight: 600;
+font-size: 36px;
+line-height: 1.11;
+letter-spacing: 0.02em;
+color: var(--second-text-color);
+}
+
+.footer-text {
+font-family: inherit;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: var(--footer-text);
+}
+
+.portfolio-list .btn {
+    color: var(--accent);
+    background-color: #F4F4FD;
+}
+
+.portfolio-list .btn:hover,
+.portfolio-list .btn:focus {
+color: #FFFFFF;
+background-color: #4D5AE5;
+}
