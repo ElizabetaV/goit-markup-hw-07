@@ -14,6 +14,25 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding-left: 0;
+}
+
+img {
+    display: block;
+}
+
 .logo {
     color: var(--second-text-color);
     font-family: 'Raleway', sans-serif;
@@ -38,6 +57,12 @@ body {
     text-decoration: none;
 }
 
+.header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #E7E9FC;
+}
+
 .header-link,
 .menu-link,
 .portfolio-menu-link {
@@ -56,6 +81,32 @@ color: var(--first-text-color);
 .header-link:focus {
 color: #4D5AE5;
 }
+
+.header > .container {
+    display: flex;
+}
+
+.header-logo{
+    margin-right: 76px;
+}
+
+.menu-nav {
+    display: flex;
+    margin-right: auto;
+}
+
+.menu-list {
+    display: flex;
+    gap: 40px;
+}
+
+.header-list {
+    display: flex;
+    gap: 40px;
+
+}
+
+
 
 .menu-link {
 font-family: 'Roboto', sans-serif;
@@ -104,12 +155,19 @@ color: var(--second-text-color);
     background: #2E2F42;
 }
 
+.hero > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .hero-name {
 font-weight: 700;
 font-size: 56px;
 line-height: 1.07;
 letter-spacing: 0.02em;
 color: #FFFFFF;
+margin-bottom: 48px;
 }
 
 .btn {
@@ -122,6 +180,30 @@ letter-spacing: 0.04em;
 color: #FFFFFF;
 background-color: #4D5AE5;
 cursor: pointer;
+
+border-radius: 4px;
+}
+
+
+.hero-btn {
+min-width: 170px;
+height: 56px;
+display: block;
+margin: 0 auto;
+padding: 12px 24px;
+}
+
+.portfolio-list {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.portfolio-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 12px 24px;
+    border: 1px solid #E7E9FC;
 }
 
 .text  {
@@ -137,7 +219,14 @@ font-size: 20px;
 line-height: 1.2;
 letter-spacing: 0.02em;
 color: var(--second-text-color);
+margin-bottom: 8px;
 }
+
+.skills-list {
+    display: flex;
+    gap: 24px;
+}
+
 
 .skills-list,
 .header-list,
@@ -149,15 +238,56 @@ color: var(--second-text-color);
 list-style-type: none;
 }
 
+.descr > .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.descr-wrap {
+   display: flex;
+   align-items: center;
+}
+
+.descr-list {
+    display: flex;
+    gap: 24px;
+}
+
+.descr-item {
+    width: calc((100 - 48) / 3);
+}
+
 .descr-title {
 font-weight: 700;
 font-size: 36px;
 line-height: 1.11;
 letter-spacing: 0.02em;
 color: var(--second-text-color);
+margin-bottom: 72px;
+margin-right: auto;
+margin-left: auto;
 }
+
 .team {
-    color: #F4F4FD;
+    background-color: #F4F4FD;
+}
+
+.team > .container {
+    padding-left: 0;
+}
+
+.team-list {
+display: flex;
+gap: 24px;
+}
+
+.team-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.team-item {
+    width: calc((100 - 72) / 4);
 }
 
 .team-title {
@@ -166,6 +296,7 @@ font-size: 36px;
 line-height: 1.11;
 letter-spacing: 0.02em;
 color: var(--second-text-color);
+margin-bottom: 72px;
 }
 
 .team-item-title {
@@ -191,6 +322,8 @@ color: var(--second-text-color);
 
 .footer {
     background-color: var(--secong-background-color);
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .footer-text {
@@ -198,7 +331,10 @@ font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: var(--footer-text);
+margin-top: 16px;
+max-width: 264px;
 }
+
 
 .portfolio-list .btn {
     color: var(--accent);
@@ -209,6 +345,11 @@ color: var(--footer-text);
 .portfolio-list .btn:focus {
 color: #FFFFFF;
 background-color: #4D5AE5;
+border: none;
+}
+
+.portfolio-list {
+    margin-bottom: 72px;
 }
 
 .visually-hidden {
@@ -224,6 +365,55 @@ background-color: #4D5AE5;
     margin: -1px;
 }
 
-.footer>.logo {
+.container>.logo {
 color: #F4F4FD;;
+}
+
+.container {
+    width: 1128px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.portfolio > .container {
+    padding: 0;
+}
+
+.portfolio-menu-list {
+    display: flex;
+    flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+}
+
+.portfolio-menu-item {
+ width: calc((100 - 72) / 3);
+ border-bottom: 1px solid #E7E9FC;
+}
+
+.portfolio-menu-item {
+    display: flex;
+
+}
+
+.card-wrap {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 16px;
+}
+
+.team-item > .card-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio-menu-title,
+.team-item-title {
+    margin-bottom: 8px;
+}
+
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
