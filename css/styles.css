@@ -247,6 +247,17 @@ margin-bottom: 8px;
     gap: 24px;
 }
 
+.icon-wrap {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 264px;
+height: 112px;
+background-color: #F4F4FD;
+border-radius: 4px;
+margin-bottom: 8px;
+}
+
 .skills-item {
     flex-basis: calc((100% - 72px) / 4);
 }
@@ -258,7 +269,8 @@ margin-bottom: 8px;
 .team-list,
 .portfolio-list,
 .portfolio-menu-list,
-.team-soc-list {
+.team-soc-list,
+.customers-list {
 list-style-type: none;
 }
 
@@ -338,8 +350,63 @@ width: 100%;
 height: 100%;
 background-color: #4D5AE5;
 border-radius: 50%;
-display: block;
-fill: #2E2F42;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+.team-soc-link:hover,
+.team-soc-link:focus {
+    background-color: #404BBF;
+}
+
+.customers-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    color: var(--second-text-color);
+    text-align: center;
+    margin-bottom: 72px;
+    }
+    
+    .customers {
+    padding-top: 130px;
+    padding-bottom: 120px;
+    }
+    
+    .customers-list {
+        display: flex;
+        gap: 24px;
+    }
+    .customers-item {
+    width: calc((100% - 120px) / 6);
+    height: 88px;
+    }
+    .customers-link {
+        width: 100%;
+        height: 100%;
+        border: 1px solid #8e8f99;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .customers-icon {
+         fill: #8e8f99;
+    }
+
+.customers-link:hover ,
+.customers-link:focus {
+     border-color: #404BBF;
+}   
+
+.customers-link:hover .customers-icon,
+.customers-link:focus .customers-icon {
+    fill: #404BBF;
 }
 
 .portfolio-menu-title {
@@ -449,3 +516,4 @@ color: #F4F4FD;;
     padding-top: 120px;
     padding-bottom: 120px;
 }
+
