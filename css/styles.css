@@ -165,6 +165,8 @@ color: var(--second-text-color);
     rgba(46, 47, 66, 0.7), 
     rgba(46, 47, 66, 0.7)),
     url("../imges/people-office.jpg");
+    background-size: cover;
+    background-position: center;
     margin-left: auto;
     margin-right: auto;
 }
@@ -213,19 +215,6 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 .hero-btn:hover, 
 .hero-btn:focus {
     background-color: #404BBF;
-}
-
-.portfolio-list {
-    display: flex;
-    gap: 24px;
-    justify-content: center;
-}
-
-.portfolio-btn {
-    display: block;
-    margin: 0 auto;
-    padding: 12px 24px;
-    border: 1px solid #E7E9FC;
 }
 
 .text  {
@@ -342,7 +331,7 @@ color: var(--second-text-color);
 }
 
 .team-item .text {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 .team-soc-list {
@@ -434,6 +423,7 @@ justify-content: center;
 
 .footer .container {
     display: flex;
+    align-items: baseline;
 }
 
 .footer-wrap .logo {
@@ -498,28 +488,30 @@ height: 40px;
     background-color: #31D0AA;
 }
 
-.portfolio-list .btn {
+.portfolio-list {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 72px;
+}
+
+.portfolio-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 12px 24px;
+    border: 1px solid #E7E9FC;
     color: var(--accent);
     background-color: #F4F4FD;
 }
 
-.portfolio-list .btn:hover,
-.portfolio-list .btn:focus {
-color: #FFFFFF;
-background-color: #404BBF;
-border: none;
-
-}
-
 .portfolio-btn:hover,
 .portfolio-btn:focus {
+    color: #FFFFFF;
+    background-color: #404BBF;
+    border-color: transparent;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
     0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
-.portfolio-list {
-    margin-bottom: 72px;
 }
 
 .visually-hidden {
@@ -559,12 +551,13 @@ border: none;
  display: flex;
 }
 
-.portfolio-menu-item:hover,
-.portfolio-menu-item:focus {
+.portfolio-menu-link:hover,
+.portfolio-menu-link:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-menu-link > .card-wrap {
+    display: block;
     border-left: 1px solid #E7E9FC;
     border-right: 1px solid #E7E9FC;
     border-bottom: 1px solid #E7E9FC;
