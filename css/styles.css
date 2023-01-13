@@ -78,6 +78,7 @@ font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: var(--first-text-color);
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link:hover,
@@ -117,6 +118,7 @@ font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: var(--second-text-color);
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-link:hover,
@@ -127,18 +129,24 @@ color: var(--second-text-color);
     font-size: 16px;
     line-height: 1,5;
     letter-spacing: 0.02em;
-    color: #4D5AE5;
+    color: #404BBF;
 }
 
-.menu-item:active {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1,5;
-    letter-spacing: 0.02em;
-    color: #4D5AE5;
-    
+
+.menu-link {
+    position: relative;
+}
+
+.current::after {
+    content: "";    
+    position: absolute;
+    left: 0;
+    bottom: -28px;
+    width: 100%;
+    height: 4px;
+    display: block;
+    background-color: #404BBF;
+    border-radius: 2px;
 }
 
 
@@ -199,7 +207,6 @@ letter-spacing: 0.04em;
 color: #FFFFFF;
 background-color: #4D5AE5;
 cursor: pointer;
-
 border-radius: 4px;
 }
 
@@ -210,6 +217,7 @@ height: 56px;
 padding: 12px 24px;
 border: none;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover, 
@@ -353,6 +361,7 @@ border-radius: 50%;
 display: flex;
 align-items: center;
 justify-content: center;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -395,9 +404,9 @@ justify-content: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
-
-
 
 .customers-icon {
     fill: #8e8f99;
@@ -478,6 +487,8 @@ height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .soc-madia-icon {
     fill: #8e8f99;
@@ -502,6 +513,10 @@ height: 40px;
     border: 1px solid #E7E9FC;
     color: var(--accent);
     background-color: #F4F4FD;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-btn:hover,
@@ -548,11 +563,19 @@ height: 40px;
 
 .portfolio-menu-item {
  width: calc((100% - 48px) / 3);
+ 
+}
+
+.portfolio-menu-item:hover .portfolio-menu-text,
+.portfolio-menu-item:focus .portfolio-menu-text {
+transform: translateY(0);
 }
 
 .portfolio-menu-link {
     display: block;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .portfolio-menu-link:hover,
@@ -562,11 +585,30 @@ height: 40px;
       0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
+.portfolio-menu-text {
+position: absolute;
+top: 0;
+font-weight: 400px;
+font-size: 16px;
+line-height: 1.5;
+color: #F4F4FD;
+padding: 40px 32px;
+background-color: var(--accent);
+height: 100%;
+transform: translateY(100%);
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .portfolio-menu-link > .card-wrap {
     display: block;
     border-left: 1px solid #E7E9FC;
     border-right: 1px solid #E7E9FC;
     border-bottom: 1px solid #E7E9FC;
+}
+
+.portfolio-menu-wrap {
+    position: relative;
+    overflow: hidden;
 }
 
 .card-wrap {
@@ -590,3 +632,46 @@ height: 40px;
     padding-bottom: 120px;
 }
 
+.backdrop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #FCFCFC;
+    width: 408px;
+    min-height: 576px;
+    border-radius: 4px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #E7E9FC;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
