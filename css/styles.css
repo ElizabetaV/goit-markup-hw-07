@@ -83,7 +83,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 .header-link:hover,
 .header-link:focus {
-color: #4D5AE5;
+color: #404BBF;
 }
 
 .header > .container {
@@ -404,12 +404,13 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
 .customers-icon {
     fill: #8e8f99;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link:hover,
@@ -581,14 +582,13 @@ transform: translateY(0);
 .portfolio-menu-link:hover,
 .portfolio-menu-link:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-     0px 1px 1px rgba(46, 47, 66, 0.16),
-      0px 2px 1px rgba(46, 47, 66, 0.08);
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-menu-text {
 position: absolute;
 top: 0;
-font-weight: 400px;
 font-size: 16px;
 line-height: 1.5;
 color: #F4F4FD;
@@ -668,6 +668,20 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-icon {
+fill: #000000;
+}
+
+.modal-close:hover ,
+.modal-close:focus {
+    background-color: #404BBF;
+    fill: #ffffff;
+    border-color: transparent;
 }
 
 .is-hidden {
