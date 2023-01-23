@@ -509,18 +509,18 @@ height: 40px;
 }
 
 .subscribe-title {
+    text-align: start;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #FFFFFF;
-margin-bottom: 16px;
+    margin-bottom: 16px;
 }
 
-.subscribe-input-wrap {
+.subscribe-form {
     display: flex;
     justify-content: center;
-    gap: 24px;
 }
   
 .subscribe-input {
@@ -531,6 +531,7 @@ margin-bottom: 16px;
     width: 264px;
     height: 40px;
     padding-left: 16px;
+    margin-right: 24px;
 }
 
 .subscribe-btn {
@@ -727,6 +728,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     top: 50%;
     left: 50%;
     padding: 24px;
+    padding-top: 72px;
     background-color: #FCFCFC;
     width: 408px;
     min-height: 576px;
@@ -740,9 +742,10 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
    display: block;
-   margin-left: auto;
-   margin-bottom: 24px;
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -822,8 +825,8 @@ flex-direction: column;
 margin-bottom: 8px;
 }
 
-.modal-field:last-child {
-    margin-bottom: 24px;
+.modal-field:nth-child(4) {
+    margin-bottom: 16px;
 }
 
 .modal-comment {
@@ -844,7 +847,7 @@ margin-bottom: 8px;
 .input-text {
 font-weight: 400;
 font-size: 12px;
-line-height: 14px;
+line-height: 1.16;
 letter-spacing: 0.01em;
 color: #8E8F99;
 margin-bottom: 4px;
@@ -853,7 +856,7 @@ margin-bottom: 4px;
 .submit-btn {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 16px;
+    margin-top: 24px;
     padding: 16px 32px;
     width: 169px;
     height: 56px;
