@@ -1,0 +1,16 @@
+
+@media screen and (min-width: 1200px) {
+
+    .container {
+        max-width: 1158px;
+    }
+
+    .hero {
+        padding-top: 188px;
+        padding-bottom: 188px;
+    }
+
+    .hero-name {
+        margin-bottom: 48px;
+    }
+}
