@@ -5,12 +5,134 @@
         max-width: 1158px;
     }
 
+    .header-list {
+        flex-direction: row;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .header-item{
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .current::after {
+        bottom: -28px;
+    }
+
+    /* ----------HERO-------- */
+
     .hero {
         padding-top: 188px;
         padding-bottom: 188px;
     }
 
+    .overlay {
+        background-image: linear-gradient(to right, 
+    rgba(46, 47, 66, 0.7), 
+    rgba(46, 47, 66, 0.7)),
+    url("../imges/people-office.jpg");
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .overlay {
+        background-image: linear-gradient(to right, 
+        rgba(46, 47, 66, 0.7), 
+        rgba(46, 47, 66, 0.7)),
+        url("../imges/people-office-2x.jpg");
+        }
+    }
+
     .hero-name {
         margin-bottom: 48px;
     }
+
+    /* ----------SKILLS-------- */
+
+    .skills-list {
+        gap: 24px;
+    }
+
+    .skills-item {
+        flex-basis: calc((100% - 72px) / 4);
+    }
+
+    .skills-item-title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .text {
+        font-weight: 400;
+    }
+
+    .icon-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 264px;
+        height: 112px;
+        background-color: #F4F4FD;
+        border-radius: 4px;
+        margin-bottom: 8px;
+    }
+
+    /* ----------DESCR-------- */
+    .descr {
+        display: block;
+    }
+
+    .descr-list {
+        display: flex;
+        gap: 24px;
+    }
+    
+    .descr-item {
+        width: calc((100% - 48px) / 3);
+    }
+    
+    .descr-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    color: var(--second-text-color);
+    margin-bottom: 72px;
+    text-align: center;
+    }
+    
+    /* ----------TEAM-------- */
+    .team-list {
+        gap: 24px;
+    }
+   
+    .team-item {
+        width: calc((100% - 72px) / 4);
+    }
+
+    /* ----------CUSTOMERS-------- */
+
+    .customers {
+        padding-top: 130px;
+        padding-bottom: 120px;
+    }
+    
+    .customers-list {
+        flex-wrap: nowrap;
+        gap: 24px;
+    }
+
+    .customers-item {
+        width: calc((100% - 120px) / 6);
+    }
+    
+    /* ----------FOOTER-------- */
+
+    .footer .container {
+        gap: 72px;
+    }
 }
+
