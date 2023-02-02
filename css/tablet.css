@@ -11,6 +11,10 @@
         margin-right: 120px;
     }
 
+    .header-item:not(:last-child) {
+        margin-bottom: 4px;
+    }
+
     .menu-list {
         display: flex;
         gap: 40px;
@@ -51,7 +55,7 @@
             content: "";    
             position: absolute;
             left: 0;
-            bottom: -36px;
+            bottom: -40px;
             width: 100%;
             height: 4px;
             display: block;
@@ -116,9 +120,6 @@
     }
 
     /* ----------SKILLS-------- */
-    .skills {
-        padding-bottom: 72px;
-    }
 
     .skills-list {
         flex-direction: row;
@@ -127,7 +128,7 @@
     }
 
     .skills-item {
-        flex-basis: calc((100% - 24px) / 2);
+        width: calc((100% - 24px) / 2);
     }
 
     .skills-item-title {
@@ -148,6 +149,7 @@
 
     /* ----------CUSTOMERS-------- */
     .customers-list {
+        justify-content: space-between;
         gap: 72px 15px;
     }
 
@@ -181,6 +183,7 @@
 
     .subscribe-input {
         margin-right: 24px;
+        margin-bottom: 0;
     }
 
     .subscribe-title {
